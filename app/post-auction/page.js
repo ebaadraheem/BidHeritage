@@ -258,7 +258,7 @@ const Page = () => {
       <div className='bg-[#8B4513] m-2 w-full max-w-[600px] p-6 rounded-lg'>
 
         <label htmlFor="file-input" >
-          <div className='bg-gray-100 cursor-pointer h-72 w-full mb-4 flex justify-center items-center rounded-lg'>
+          <div className='  bg-[#D2B48C]   cursor-pointer h-72 w-full mb-4 flex justify-center items-center rounded-lg'>
             <input
               type="file"
               multiple
@@ -279,7 +279,7 @@ const Page = () => {
               placeholder='Enter title'
               value={formData.title}
               onChange={handleChange}
-              className='border bg-gray-100 border-gray-300 p-2 rounded-lg'
+              className='border bg-[#D2B48C]   p-2 rounded-lg'
             />
           </div>
           <div className='flex flex-col gap-2'>
@@ -289,7 +289,7 @@ const Page = () => {
               placeholder='Enter description'
               value={formData.description}
               onChange={handleChange}
-              className='border bg-gray-100 border-gray-300 p-2 min-h-52 rounded-lg'
+              className='border bg-[#D2B48C]  p-2 min-h-52 rounded-lg'
             />
           </div>
           <div className='flex items-center  gap-2'>
@@ -302,7 +302,7 @@ const Page = () => {
               placeholder='Enter starting bid'
               value={formData.startingBid}
               onChange={handleChange}
-              className='border bg-gray-100 max-sm:w-40 border-gray-300 p-1 rounded-lg flex-1'
+              className='border bg-[#D2B48C]  max-sm:w-40 p-1 rounded-lg flex-1'
             />
             <span className=' flexer text-white'>pkr</span>
           </div>
@@ -317,7 +317,7 @@ const Page = () => {
               placeholder='Enter your name'
               value={formData.owner.name}
               onChange={handleChange}
-              className='border bg-gray-100 border-gray-300 p-1 max-sm:w-40 rounded-lg flex-1'
+              className='border bg-[#D2B48C]  p-1 max-sm:w-40 rounded-lg flex-1'
             />
           </div>
           <div className='flex items-center gap-2'>
@@ -328,7 +328,7 @@ const Page = () => {
               placeholder='Enter your phone number'
               value={formData.owner.phoneNo}
               onChange={handleChange}
-              className='border max-sm:w-40 bg-gray-100 border-gray-300 p-1 rounded-lg flex-1'
+              className='border max-sm:w-40 bg-[#D2B48C] p-1 rounded-lg flex-1'
             />
           </div>
           <div className='flex items-center gap-2'>
@@ -342,7 +342,7 @@ const Page = () => {
               placeholder='Enter your address'
               value={formData.owner.address}
               onChange={handleChange}
-              className='border max-sm:w-40 bg-gray-100 border-gray-300 p-1 rounded-lg flex-1'
+              className='border max-sm:w-40  bg-[#D2B48C] p-1 rounded-lg flex-1'
             />
           </div>
           <div className='flex items-center gap-2'>
@@ -356,7 +356,7 @@ const Page = () => {
               placeholder='Enter your E-Mail'
               value={formData.owner.email}
               onChange={handleChange}
-              className='border max-sm:w-40 bg-gray-100 border-gray-300 p-1 rounded-lg flex-1'
+              className='border max-sm:w-40 bg-[#D2B48C]  p-1 rounded-lg flex-1'
             />
           </div>
           <div className='mt-1 flex flex-col gap-1'>
