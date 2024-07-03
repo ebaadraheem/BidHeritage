@@ -1,59 +1,40 @@
-BidHeritage
-BidHeritage is a Next.js website dedicated to auctioning and selling old heritage items. It utilizes Firebase authentication for user management and provides various features for both users and administrators.
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-Features
-User Authentication:
+## Getting Started
 
-Users can sign up, log in, and use Google authentication.
-Profile information is displayed on their auctions.
-Auctions:
+First, run the development server:
 
-Users can create new posts (auctions) for items they want to sell.
-Other users can place bids on these auctions.
-Profile Management:
-
-Users can update their profile information, which reflects on their auctions.
-Search and Category Functionality:
-
-Users can search for items and filter them by categories.
-Admin Features:
-
-Admins can create categories for items.
-They can also check and respond to contact messages sent by users through the contact form.
-Setup Instructions
-To run BidHeritage locally or deploy it:
-
-Clone the repository:
-
-bash
-Copy code
-git clone <repository_url>
-cd bidheritage
-Install dependencies:
-
-Copy code
-npm install
-
-Run the development server:
-
-arduino
-Copy code
+```bash
 npm run dev
-Open http://localhost:3000 to view it in the browser.
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-Deploy:
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Deploy the application to your preferred hosting platform following their deployment instructions.
-Technologies Used
-Next.js
-Firebase (Authentication)
-React
-Tailwind CSS
-Contributing
-Contributions are welcome. Please fork the repository and submit pull requests.
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
-Contact
-For any inquiries or issues, please contact ebaadraheem20@gmail.com.
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+
+
+

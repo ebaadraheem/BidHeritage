@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Input Arrows Remove */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #D2B48C; /* Light Wood color for the track */
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #8B4513; /* Dark Wood color for the thumb */
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #A0522D; /* Medium Wood color for the thumb on hover */
+}
+
+  .flexer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .wooden-nav-bg {
+    background-color: #8B4513;
+    color: #F5F5DC; 
+  }
+ 
+  .transition-transform {
+    transition: transform 0.3s ease-in-out;
+  }
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
