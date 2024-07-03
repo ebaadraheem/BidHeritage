@@ -258,7 +258,7 @@ const Page = () => {
       <div className='bg-[#8B4513] m-2 w-full max-w-[600px] p-6 rounded-lg'>
 
         <label htmlFor="file-input" >
-          <div className='  bg-[#D2B48C]   cursor-pointer h-72 w-full mb-4 flex justify-center items-center rounded-lg'>
+          <div className=' border bg-[#D2B48C]   cursor-pointer h-72 w-full mb-4 flex justify-center items-center rounded-lg'>
             <input
               type="file"
               multiple
