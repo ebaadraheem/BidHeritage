@@ -16,6 +16,9 @@ const Auction = () => {
     setShowSidebar(!showSidebar);
 
   };
+  const closeSidebar = () => {
+    setShowSidebar(false);
+  };
 
   useEffect(() => {
     if (auctions) {
