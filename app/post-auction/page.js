@@ -99,7 +99,7 @@ const Page = () => {
   useEffect(() => {
     const uploadData = async () => {
       if (Temp.images && Temp.images.length > 0) {
-
+         toast.success("Your auction has been successfully posted!")
         const response = await fetch('/api/cards', {
           method: 'POST',
           headers: {
@@ -198,7 +198,7 @@ const Page = () => {
         tempuser
       ]
     })
-    toast.success("Your auction has been successfully posted!")
+    
     setTemp(formData)
     setFormData({
       specificId: '',
