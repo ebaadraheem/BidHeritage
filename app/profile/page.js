@@ -196,10 +196,10 @@ const page = () => {
                                     type="file"
                                     multiple
                                     onChange={handleFileChange}
-                                    className="hidden bg-blue-400"
+                                    className="hidden "
                                     id="file-input"
                                 />
-                                <img className=' bg-gray-100 max-sm:h-40 max-sm:w-40 h-48 w-48 rounded-full' src={uploadedphoto ? uploadedphoto : "user.svg"} alt="" />
+                                <img className=' bg-[#D2B48C] max-sm:h-40 max-sm:w-40 h-48 w-48 rounded-full' src={uploadedphoto ? uploadedphoto : "user.svg"} alt="" />
                             </label>
                         </div>
                     </div>
@@ -215,7 +215,7 @@ const page = () => {
                                 value={formData.name}
                                 placeholder='Your Name'
                                 onChange={handleChange}
-                                className='bg-gray-100 p-1 rounded-lg'
+                                className='bg-[#D2B48C] p-1 rounded-lg'
                             />
                         </div>
                         <div className='flex flex-col gap-2'>
@@ -225,7 +225,7 @@ const page = () => {
                                 value={formData.bio}
                                 onChange={handleChange}
                                 placeholder='Enter about yourself'
-                                className='bg-gray-100 p-1 min-h-36 rounded-lg'
+                                className='  bg-[#D2B48C] p-1 min-h-36 rounded-lg'
                             />
                         </div>
                         <div className='flex pb-2 flex-col gap-2'>
@@ -236,7 +236,7 @@ const page = () => {
                                 onChange={handleChange}
                                 name="city"
                                 placeholder='Your City'
-                                className='bg-gray-100 p-1 rounded-lg'
+                                className=' bg-[#D2B48C] p-1 rounded-lg'
                             />
                         </div>
                     </div>
