@@ -34,11 +34,12 @@ const Category = () => {
         const fetchCategories = async () => {
             try {
                 const response = await fetch('/api/category/all', {
-                    method: 'GET',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                });
+                method: 'POST',
+                headers: {
+                   'Content-Type': 'application/json',
+              },
+                 body: JSON.stringify({message:"Hello" }),
+              });
                 const data = await response.json();
                 if (data.success) {
                     setCategories(data.categories);
