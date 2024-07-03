@@ -125,16 +125,16 @@ const Description = ({ params }) => {
             </svg>
         </div>
     )
-    return (
+  return (
         <div className='min-h-[100vh] bg-[#D2B48C] py-1'>
-            <div className="max-w-4xl min-h-[100vh]  mx-auto p-6 flex flex-col bg-gray-100 rounded-lg shadow-lg  ">
+            <div className="max-w-4xl min-h-[100vh]  mx-auto p-6 flex flex-col  rounded-lg shadow-lg  ">
                 <Slider {...settings} className="mb-6 ">
 
                     {data.images.map((image, index) => (
                         <div key={index} className="relative  px-2" >
                             <img src={image} alt={`Slide ${index + 1}`} className=" object-contain w-full h-64 sm:h-80  rounded cursor-pointer" />
                             <div className="absolute inset-0  flex justify-end items-end ">
-                                <img onClick={() => openModal(image)} src="/full_view.svg" alt="Full View" className="w-10  hover:bg-slate-50 rounded-md p-2 cursor-pointer" />
+                                <img onClick={() => openModal(image)} src="/full_view.svg" alt="Full View" className="w-10  hover:bg-[#F5DEB3]  rounded-md p-2 cursor-pointer" />
                             </div>
                         </div>
                     ))}
@@ -144,8 +144,8 @@ const Description = ({ params }) => {
                 <div className="mb-4">
                     {highestlowestbid &&
                         <>
-                            {(highestlowestbid.data.lowestValueObject.Bid !== highestlowestbid.data.highestValueObject.Bid) && <h2 className="text-xl pr-2 break-all"><b>Lowest Bid :</b>   {highestlowestbid.data.lowestValueObject.Bid} pkr</h2>}
-                            <h2 className="text-xl  pr-2 break-all"><b>Highest Bid :</b>  {highestlowestbid.data.highestValueObject.Bid} pkr</h2>
+                            {(highestlowestbid.data.lowestValueObject.Bid !== highestlowestbid.data.highestValueObject.Bid) && <div className="text-xl pr-2  text-black font-semibold break-all"><span className=' text-black font-bold'>Lowest Bid :</span>   {highestlowestbid.data.lowestValueObject.Bid} pkr</div>}
+                            <div className="text-xl  text-black font-semibold pr-2 break-all"><span className=' text-black font-bold'>Highest Bid :</span>  {highestlowestbid.data.highestValueObject.Bid} pkr</div>
                         </>}
                 </div>
                 <div>
@@ -156,23 +156,23 @@ const Description = ({ params }) => {
                         Place a Bid
                     </button>}
                 </div>
-                <div className="bg-white p-4 rounded-lg shadow">
+                <div className=" p-4 rounded-lg shadow-lg">
                     {biocity.name &&
                         <div className=' mb-1 '>
-                            <div className='text-xl font-semibold mb-2"'>Posted by:</div>
+                            <div className='text-xl font-bold mb-2"'>Posted by:</div>
                             <div className="text-gray-700 mt-2 flex gap-2 items-center break-all"> <span className=' w-8'><img onClick={() => openModal(biocity.profileimg)} className=' w-8 rounded-full hover:opacity-75 h-8 cursor-pointer' src={biocity.profileimg ? biocity.profileimg : "/user.svg"} alt="p" /></span> {biocity.name}</div>
-                            {biocity.bio && <p className="text-gray-700 break-all"><b>Info:</b> {biocity.bio}</p>}
-                            {biocity.city && <p className="text-gray-700 break-all"><b>City:</b> {biocity.city}</p>}
+                            {biocity.bio && <p className="text-gray-700 break-all"><span className=' text-black font-semibold'>Info:</span> {biocity.bio}</p>}
+                            {biocity.city && <p className="text-gray-700 break-all"><span className=' text-black font-semibold'>City:</span> {biocity.city}</p>}
                         </div>
                     }
-                    <h2 className="text-xl font-semibold mb-2">Owner Details</h2>
-                    <p className="text-gray-700"><b>Name:</b> {data.owner.name}</p>
-                    <p className="text-gray-700"><b>Phone:</b> {data.owner.phoneNo}</p>
+                    <h2 className="text-xl font-bold mb-2">Owner Details</h2>
+                    <p className="text-gray-700"><span className=' text-black font-semibold'>Name:</span> {data.owner.name}</p>
+                    <p className="text-gray-700"><span className=' text-black font-semibold'>Phone:</span> {data.owner.phoneNo}</p>
                     {data.owner.email &&
-                        <p className="text-gray-700 break-all"><b>E-Mail:</b> {data.owner.email}</p>
+                        <p className="text-gray-700 break-all"><span className=' text-black font-semibold'>E-Mail:</span> {data.owner.email}</p>
                     }
                     {data.owner.address &&
-                        <p className="text-gray-700"><b>Address:</b> {data.owner.address}</p>
+                        <p className="text-gray-700"><span className=' text-black font-semibold'>Address:</span> {data.owner.address}</p>
 
                     }
                 </div>
