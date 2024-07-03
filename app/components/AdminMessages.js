@@ -17,6 +17,7 @@ const AdminMessages = () => {
         headers: {
           'Content-Type': 'application/json',
         },
+          body: JSON.stringify({message:"Hello" }),
       });
       const dt = await response.json();
       if (dt.success) {
