@@ -16,9 +16,6 @@ const Auction = () => {
     setShowSidebar(!showSidebar);
 
   };
-  const closeSidebar = () => {
-    setShowSidebar(false);
-  };
 
   useEffect(() => {
     if (auctions) {
@@ -105,9 +102,6 @@ const Auction = () => {
         className={`fixed top-0 left-0 bottom-0 max-w-[25vw] bg-[#8B4513] z-50 transition-transform duration-300 ${showSidebar ? 'translate-x-0' : '-translate-x-full'
           } max-w-[450px] min-w-60 min-h-[100vh] lg:translate-x-0 lg:relative lg:flex lg:flex-col lg:justify-start lg:items-start  lg:transition-none`}
       >
-        <button className="absolute mt-1 lg:hidden top-2 right-2 text-gray-700 text-2xl" onClick={closeSidebar}>
-          <img className=' w-5' src="/cross.svg" alt="" />
-        </button>
         <div className="p-4  w-full max-lg:fixed">
           <h2 className="font-semibold ml-1 mb-2 text-white">Categories</h2>
           <ul className="space-y-1  w-full">
