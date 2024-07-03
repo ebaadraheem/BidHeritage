@@ -1,7 +1,9 @@
 import { NextResponse } from "next/server";
 import ContactForm from "@/app/models/ContactForm";
-export async function GET() {
+export async function POST(req) {
   try {
+    const messages=await req.json()
+    console.log("Message is ",messages)
     const AllCards = await ContactForm.find();
     if (AllCards) {
       return NextResponse.json({ success: true, cards: AllCards });
