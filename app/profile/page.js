@@ -215,7 +215,7 @@ const page = () => {
                                 value={formData.name}
                                 placeholder='Your Name'
                                 onChange={handleChange}
-                                className='bg-[#D2B48C] outline-none p-1 rounded-lg'
+                                className='bg-[#D2B48C] border outline-none p-1 rounded-lg'
                             />
                         </div>
                         <div className='flex flex-col gap-2'>
@@ -225,7 +225,7 @@ const page = () => {
                                 value={formData.bio}
                                 onChange={handleChange}
                                 placeholder='Enter about yourself'
-                                className='  bg-[#D2B48C]  outline-none  p-1 min-h-36 rounded-lg'
+                                className='  bg-[#D2B48C] border outline-none  p-1 min-h-36 rounded-lg'
                             />
                         </div>
                         <div className='flex pb-2 flex-col gap-2'>
@@ -236,7 +236,7 @@ const page = () => {
                                 onChange={handleChange}
                                 name="city"
                                 placeholder='Your City'
-                                className=' bg-[#D2B48C] outline-none p-1 rounded-lg'
+                                className=' bg-[#D2B48C] border outline-none p-1 rounded-lg'
                             />
                         </div>
                     </div>
