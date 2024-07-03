@@ -1,8 +1,10 @@
 
 import { NextResponse } from "next/server";
 import Category from "@/app/models/Category";
-export async function GET() {
+export async function POST(req) {
     try {
+        const messages=await req.json()
+        console.log("Message is ",messages)
         const card = await Category.findOne();
 
         if (card) {
