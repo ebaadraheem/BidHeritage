@@ -279,7 +279,7 @@ const Page = () => {
               placeholder='Enter title'
               value={formData.title}
               onChange={handleChange}
-              className='border bg-[#D2B48C]   p-2 rounded-lg'
+              className='border outline-none bg-[#D2B48C]   p-2 rounded-lg'
             />
           </div>
           <div className='flex flex-col gap-2'>
@@ -289,7 +289,7 @@ const Page = () => {
               placeholder='Enter description'
               value={formData.description}
               onChange={handleChange}
-              className='border bg-[#D2B48C]  p-2 min-h-52 rounded-lg'
+              className='border bg-[#D2B48C]  p-2 min-h-52 outline-none rounded-lg'
             />
           </div>
           <div className='flex items-center  gap-2'>
@@ -302,7 +302,7 @@ const Page = () => {
               placeholder='Enter starting bid'
               value={formData.startingBid}
               onChange={handleChange}
-              className='border bg-[#D2B48C]  max-sm:w-40 p-1 rounded-lg flex-1'
+              className='border bg-[#D2B48C]  max-sm:w-40 p-1 outline-none rounded-lg flex-1'
             />
             <span className=' flexer text-white'>pkr</span>
           </div>
@@ -317,7 +317,7 @@ const Page = () => {
               placeholder='Enter your name'
               value={formData.owner.name}
               onChange={handleChange}
-              className='border bg-[#D2B48C]  p-1 max-sm:w-40 rounded-lg flex-1'
+              className='border bg-[#D2B48C]  p-1 max-sm:w-40 outline-none rounded-lg flex-1'
             />
           </div>
           <div className='flex items-center gap-2'>
@@ -328,7 +328,7 @@ const Page = () => {
               placeholder='Enter your phone number'
               value={formData.owner.phoneNo}
               onChange={handleChange}
-              className='border max-sm:w-40 bg-[#D2B48C] p-1 rounded-lg flex-1'
+              className='border max-sm:w-40 bg-[#D2B48C] outline-none p-1 rounded-lg flex-1'
             />
           </div>
           <div className='flex items-center gap-2'>
@@ -342,7 +342,7 @@ const Page = () => {
               placeholder='Enter your address'
               value={formData.owner.address}
               onChange={handleChange}
-              className='border max-sm:w-40  bg-[#D2B48C] p-1 rounded-lg flex-1'
+              className='border max-sm:w-40  bg-[#D2B48C] p-1 outline-none rounded-lg flex-1'
             />
           </div>
           <div className='flex items-center gap-2'>
@@ -356,7 +356,7 @@ const Page = () => {
               placeholder='Enter your E-Mail'
               value={formData.owner.email}
               onChange={handleChange}
-              className='border max-sm:w-40 bg-[#D2B48C]  p-1 rounded-lg flex-1'
+              className='border max-sm:w-40 bg-[#D2B48C] outline-none  p-1 rounded-lg flex-1'
             />
           </div>
           <div className='mt-1 flex flex-col gap-1'>
