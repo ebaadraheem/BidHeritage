@@ -164,7 +164,7 @@ const Navbar = () => {
       {
         isOpen && (
           <div className={`md:hidden transition-all duration-300 `}>
-            <Link className="block text-white py-2 mx-3 px-1 hover:bg-[#B64500]" href={"/"}>Home</Link>
+            <div className="block text-white py-2 mx-3 px-1 hover:bg-[#B64500]" onClick={() => { router.push('/'); toggleMenu(); }}>Home</div>
             <div className="relative">
               <div className="flex items-center text-white py-2 mx-3 px-1 hover:bg-[#B64500] cursor-pointer" onClick={() => setIsDropdownOpen(!isDropdownOpen)}>
                 Auctions
