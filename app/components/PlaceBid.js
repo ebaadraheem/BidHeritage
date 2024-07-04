@@ -40,7 +40,12 @@ const PlaceBid = ({ Id, setisPlaceBid, isPlaceBid, highestlowestbid }) => {
                 },
                 body: JSON.stringify(params),
             });
-      toast.success('Your bid has been placed  successfully!');
+            if(response.success){
+                toast.success('Your bid has been placed  successfully!'); 
+            }
+            else{
+                toast.error('Unfortunately bid did not placed!');
+            }
         } catch (error) {
             setMessage('An error occurred: ' + error.message);
         }
