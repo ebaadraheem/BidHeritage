@@ -40,7 +40,7 @@ const PlaceBid = ({ Id, setisPlaceBid, isPlaceBid, highestlowestbid }) => {
                 },
                 body: JSON.stringify(params),
             });
-
+      toast.success('Your bid has been placed  successfully!');
         } catch (error) {
             setMessage('An error occurred: ' + error.message);
         }
@@ -92,7 +92,7 @@ const PlaceBid = ({ Id, setisPlaceBid, isPlaceBid, highestlowestbid }) => {
         }
 
         setMessage("")
-        toast.success('Your bid has been placed successfully!');
+        
         auth.onAuthStateChanged(user => {
             if (user) {
                 setnewBid({
