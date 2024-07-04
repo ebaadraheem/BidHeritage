@@ -232,7 +232,7 @@ const Navbar = () => {
       }
 
       {/* LogIn Form */}
-      <dialog id="my_modal_3" className=' bg-[#8B4513] w-full max-sm:max-w-md sm:max-w-sm rounded-md'>
+      <dialog id="my_modal_3" className=' bg-[#8B4513] w-[95%] max-sm:max-w-md sm:max-w-sm rounded-md'>
         <form method="dialog">
           <button className="absolute top-2 right-2 p-1 rounded-full  hover:bg-[#D2B48C] focus:outline-none">
             <svg className="w-6 h-6 text-white" viewBox="0 0 20 20" fill="currentColor">
@@ -245,7 +245,7 @@ const Navbar = () => {
 
       </dialog>
       {/* Category Form */}
-      <dialog id="my_modal_5" className=' bg-[#D2B48C] w-full shadow-lg max-w-md sm:max-w-sm rounded-md'>
+      <dialog id="my_modal_5" className=' bg-[#D2B48C] w-[95%] shadow-lg max-w-md sm:max-w-sm rounded-md'>
         <form method="dialog">
           <button className="absolute top-2 right-2 p-1 rounded-full  hover:bg-[#F5DEB3]  focus:outline-none">
             <svg className="w-6 h-6 " viewBox="0 0 20 20" fill="currentColor">
@@ -258,7 +258,7 @@ const Navbar = () => {
 
       </dialog>
       {/* Contact Form */}
-      <dialog id="my_modal_7" className=' bg-[#D2B48C]  w-full shadow-lg max-w-md sm:max-w-sm rounded-md' >
+      <dialog id="my_modal_7" className=' bg-[#D2B48C]  w-[95%] shadow-lg max-w-md sm:max-w-sm rounded-md' >
         <div >
           <form method="dialog">
             <button className="absolute top-2 right-2 p-1 rounded-full  hover:bg-[#F5DEB3]  focus:outline-none">
@@ -272,7 +272,7 @@ const Navbar = () => {
       </dialog>
 
       {/* Admin Messages */}
-      <dialog id="my_modal_8" className=' bg-[#D2B48C] w-full shadow-lg max-w-md sm:max-w-sm rounded-md' >
+      <dialog id="my_modal_8" className=' bg-[#D2B48C] w-[95%] shadow-lg max-w-md sm:max-w-sm rounded-md' >
         <div >
           <form method="dialog">
             <button className="absolute top-2 right-2 p-1 rounded-full  hover:bg-[#F5DEB3]  focus:outline-none">
