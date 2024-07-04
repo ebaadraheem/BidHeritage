@@ -49,16 +49,6 @@ const Description = ({ params }) => {
                     if (result.success) {
                     sethighestlowestbid(result.data)
                     } else {
-                        const tp={data : {highestValueObject : {Bid: "100",
-                                               Name : "Lowest Bidder",
-                                                uniqueId : "da5fa748-a308-48ca-b025-82dd5f3ab93e"}
-                                           }
-                                  }, {lowestValueObject : {Bid: "100",
-                                               Name : "Lowest Bidder",
-                                                uniqueId : "da5fa748-a308-48ca-b025-82dd5f3ab93e"}
-                                           }
-                                  }
-                       sethighestlowestbid(tp)
                         console.error("Failed to get data:", result.error);
                     }
                 } catch (error) {
