@@ -44,10 +44,21 @@ export const findHighestLowestBidder = async (Id) => {
             throw new Error('Document not found');
         }
 
-        if (!Array.isArray(document.info) || document.info.length === 0) {
-            throw new Error('No data available');
-        }
+         if (!Array.isArray(document.info) || document.info.length === 0) {
+            const highestValueObject = {
+                Bid: "10",
+                Name: "Unknown",
+                uniqueId: "00000000-0000-0000-0000-000000000000"
+            };
 
+            const lowestValueObject = {
+                Bid: "10",
+                Name: "Unknown",
+                uniqueId: "00000000-0000-0000-0000-000000000000"
+            };
+
+            return { success: true, data: { highestValueObject, lowestValueObject } };
+        }
         let highestValueObject = null;
         let lowestValueObject = null;
 
