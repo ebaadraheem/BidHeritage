@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import ContactForm from "@/app/models/ContactForm";
-export async function DELETE(req) {
+import connectDB from "@/app/lib/mongodb";
+
+export async function DELETE(req) {    
+    await connectDB()
     try {
         const body = await req.json();
         const {uniqueId}=body
