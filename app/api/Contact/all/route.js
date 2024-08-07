@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import ContactForm from "@/app/models/ContactForm";
-export async function POST(req) {
+import connectDB from "@/app/lib/mongodb";
+
+export async function POST(req) {  
+    await connectDB()
   try {
     const messages=await req.json()
     console.log("Message is ",messages)
