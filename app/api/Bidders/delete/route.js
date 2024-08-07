@@ -1,6 +1,8 @@
 import { NextResponse } from "next/server";
 import Bidders from "@/app/models/Bidders";
+import connectDB from "@/app/lib/mongodb";
 export async function DELETE(req) {
+    await connectDB()
     try {
         const body = await req.json();
         const  specificId = body.senddata.specificId;
