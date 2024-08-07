@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import Category from "@/app/models/Category";
-
-
+import connectDB from "@/app/lib/mongodb";
 // DELETE method to remove a category
 export async function DELETE(req) {
+    await connectDB()
     try {
         const body = await req.json();
         const { index } = body;
