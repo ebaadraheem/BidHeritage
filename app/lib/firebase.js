@@ -3,7 +3,7 @@ import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyB1AGrm4xU5x2rYrLLYnoWuN3KI12xivOk",
+  apiKey: process.env.NEXT_PUBLIC_FIREBASE_KEY,
   authDomain: "old-heritage-ba4c1.firebaseapp.com",
   projectId: "old-heritage-ba4c1",
   storageBucket: "old-heritage-ba4c1.appspot.com",
