@@ -1,7 +1,9 @@
 
 import { NextResponse } from "next/server";
 import UserInfo from "@/app/models/UserInfo";
+import connectDB from "@/app/lib/mongodb";
 export async function POST(req) {
+    await connectDB()
     try {
         const data = await req.json();
         const { createrId } = data;
