@@ -152,7 +152,7 @@ const Description = ({ params }) => {
                     {!auth.currentUser && highestlowestbid.data && <button onClick={() => document.getElementById('my_modal_3').showModal()} className="px-6 py-2 bg-[#CC5500] inline-block text-white font-semibold rounded-lg hover:bg-[#B64500] transition duration-200 mb-4">
                         Login to place bid
                     </button>}
-                    {auth.currentUser && <button onClick={() => setisPlaceBid(!isPlaceBid)} className="px-6 py-2 bg-[#CC5500] inline-block text-white font-semibold rounded-lg hover:bg-[#B64500] transition duration-200 mb-4">
+                    {auth.currentUser && highestlowestbid && <button onClick={() => setisPlaceBid(!isPlaceBid)} className="px-6 py-2 bg-[#CC5500] inline-block text-white font-semibold rounded-lg hover:bg-[#B64500] transition duration-200 mb-4">
                         Place a Bid
                     </button>}
                 </div>
