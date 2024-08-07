@@ -18,6 +18,7 @@ export const AddToBidderCollection = async (data) => {
 };
 
 export const appendToBidderArray = async (specificId, newObject) => {
+    await connectDB();
     try {
         const result = await Bidders.findOneAndUpdate(
             { specificId },
@@ -36,6 +37,7 @@ export const appendToBidderArray = async (specificId, newObject) => {
 };
 
 export const findHighestLowestBidder = async (Id) => {
+    await connectDB();
     try {
 
         const document = await Bidders.findOne({ specificId: Id });
