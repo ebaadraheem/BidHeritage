@@ -30,6 +30,12 @@ const Contact = () => {
         },
         body: JSON.stringify(data),
       });
+      if(response){
+       toast.success("Message has been sent to developer")
+      }
+      else{
+         toast.error("Sorry.Message did not sent")
+      }
 
     } catch (error) {
       console.error("Error here ", error)
@@ -52,7 +58,6 @@ const Contact = () => {
       date: currentDate
     };
     SendMessage(messageDetail);
-    toast.success("Message has been sent to developer")
     document.getElementById('my_modal_7').close();
     reset();
   };
