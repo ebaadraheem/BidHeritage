@@ -53,7 +53,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/your-username/bidheritage.git
+git clone https://github.com/ebaadraheem/BidHeritage.git
 cd bidheritage
 Install dependencies:
 
