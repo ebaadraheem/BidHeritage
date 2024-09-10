@@ -77,22 +77,6 @@ Create a .env.local file in the root directory and add the following environment
 
 bash
 Copy code
-# MongoDB
-MONGODB_URI=<your_mongodb_uri>
-
-# Firebase
-NEXT_PUBLIC_FIREBASE_API_KEY=<your_firebase_api_key>
-NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN=<your_firebase_auth_domain>
-NEXT_PUBLIC_FIREBASE_PROJECT_ID=<your_firebase_project_id>
-NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET=<your_firebase_storage_bucket>
-NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID=<your_firebase_messaging_sender_id>
-NEXT_PUBLIC_FIREBASE_APP_ID=<your_firebase_app_id>
-
-# AWS S3
-AWS_ACCESS_KEY_ID=<your_aws_access_key>
-AWS_SECRET_ACCESS_KEY=<your_aws_secret_key>
-AWS_REGION=<your_aws_region>
-AWS_BUCKET_NAME=<your_s3_bucket_name>
 Usage
 Create an Account: Sign up using your email and start exploring.
 Post an Item: List your heritage items for auction.
@@ -100,6 +84,14 @@ Bid on Items: Place bids on items you are interested in.
 Manage Your Posts: Edit or delete your posts from your profile.
 Contributing
 Contributions are welcome! Please open an issue or submit a pull request for any changes or improvements.
+
+# ENV Variables
+NEXT_PUBLIC_FIREBASE_KEY=""
+NEXT_PUBLIC_S3_BUCKET=""
+NEXT_PUBLIC_AWS_REGION""
+NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY=""
+NEXT_PUBLIC_AWS_ACCESS_KEY_ID=""
+NEXT_PUBLIC_MONGODB_URI=""
 
 License
 This project is licensed under the MIT License. See the LICENSE file for details.
