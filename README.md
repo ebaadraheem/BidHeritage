@@ -88,7 +88,7 @@ Contributions are welcome! Please open an issue or submit a pull request for any
 # ENV Variables
 NEXT_PUBLIC_FIREBASE_KEY=""
 NEXT_PUBLIC_S3_BUCKET=""
-NEXT_PUBLIC_AWS_REGION""
+NEXT_PUBLIC_AWS_REGION=""
 NEXT_PUBLIC_AWS_SECRET_ACCESS_KEY=""
 NEXT_PUBLIC_AWS_ACCESS_KEY_ID=""
 NEXT_PUBLIC_MONGODB_URI=""
