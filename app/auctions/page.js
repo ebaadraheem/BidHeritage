@@ -11,6 +11,8 @@ const Auction = () => {
   const [categories, setcategories] = useState([])
   const [selectedCategory, setSelectedCategory] = useState("All");
   const { auctions } = useAuction();
+  const [loading, setLoading] = useState(true);
+
 
   const toggleSidebar = () => {
     setShowSidebar(!showSidebar);
@@ -20,12 +22,14 @@ const Auction = () => {
     setShowSidebar(false);
   };
 
+
   useEffect(() => {
     if (auctions) {
-      setauctionsdata(auctions)
-      setcategoryitems(auctions)
+      setauctionsdata(auctions);
+      setcategoryitems(auctions);
+      setLoading(false); // Stop loading once auctions are set
     }
-  }, [auctions, categories])
+  }, [auctions]);
 
 
   // Filter Function
@@ -43,24 +47,22 @@ const Auction = () => {
 
   // category Filter Function
   const getcategoryitems = (category) => {
+    setLoading(true);
     setSelectedCategory(category);
+    setQuery("");
     if (category === "All") {
       setauctionsdata(auctions);
-      setcategoryitems(auctions)
-    }
-    else {
+      setcategoryitems(auctions);
+    } else {
       const lowerQuery = category.toLowerCase();
       const filteredData = auctions.filter((item) => {
         const lowerTitle = item.title.toLowerCase();
-
-        if (lowerTitle.includes(lowerQuery.slice(0, 4))) {
-          return true;
-        }
+        return lowerTitle.includes(lowerQuery.slice(0, 4));
       });
       setauctionsdata(filteredData);
-      setcategoryitems(filteredData)
+      setcategoryitems(filteredData);
     }
-    setQuery("")
+    setLoading(false);
   };
 
 
@@ -71,10 +73,10 @@ const Auction = () => {
         const response = await fetch('/api/category/all', {
           method: 'POST',
           headers: {
-              'Content-Type': 'application/json',
+            'Content-Type': 'application/json',
           },
-          body: JSON.stringify({message:"Hello" }),
-      });
+          body: JSON.stringify({ message: "Hello" }),
+        });
         const data = await response.json();
         if (data.success) {
           setcategories(data.categories);
@@ -156,29 +158,45 @@ const Auction = () => {
         </div>
         <div>
           <div className="text-2xl mx-4 md:mx-6 max-md:text-xl lg:hidden font-semibold">Available</div>
-          <div className={`flexer  ${auctionsdata.length === 0 && "min-h-[80vh]"}`} >
-            {auctionsdata.length === 0 && <div className=' w-full font-semibold flexer h-[75vh] '>
-              <div>No items to show</div> 
-              </div>}
+          <div className={`flexer ${loading ? "min-h-[80vh]" : auctionsdata.length === 0 ? "min-h-[80vh]" : ""}`}>
+            {loading ? (
+              <div className="w-full h-[75vh] flex justify-center items-center">
+                <img src="/loading.svg" alt="Loading..." className="w-8 h-8 animate-spin" />
+              </div>
+            ) : auctionsdata.length === 0 ? (
+              <div className='w-full font-semibold flexer h-[75vh]'>
+                <div>No items to show</div>
+              </div>
+            ) : (
+              <div className='flex-wrap max-sm:p-1 sm:p-4 flex items-center max-w-[1800px] justify-center max-md:flex-col'>
+                {auctionsdata.map((info) => (
+                  <Card key={info.specificId} params={info} />
+                ))}
+              </div>
+            )}
+          {/* </div> */}
 
-            <div className=' flex-wrap max-sm:p-1 sm:p-4  flex items-center  max-w-[1800px] justify-center max-md:flex-col '>
 
-              {/* Cards Display */}
-              {auctionsdata.length > 0 && auctionsdata.map((info) => (
-                <Card key={info.specificId} params={info} />
-              ))}
-            </div>
+          <div className=' flex-wrap max-sm:p-1 sm:p-4  flex items-center  max-w-[1800px] justify-center max-md:flex-col '>
+
+            {/* Cards Display */}
+            {auctionsdata.length > 0 && auctionsdata.map((info) => (
+              <Card key={info.specificId} params={info} />
+            ))}
           </div>
         </div>
-
       </div>
-      {showSidebar && (
-        <div
-          className="fixed top-0 left-0 bottom-0 right-0 bg-black opacity-50 z-30"
-          onClick={closeSidebar}
-        />
-      )}
+
     </div>
+      {
+    showSidebar && (
+      <div
+        className="fixed top-0 left-0 bottom-0 right-0 bg-black opacity-50 z-30"
+        onClick={closeSidebar}
+      />
+    )
+  }
+    </div >
 
   )
 }
